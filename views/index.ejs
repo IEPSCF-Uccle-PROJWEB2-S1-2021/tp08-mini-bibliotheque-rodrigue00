@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
+<html lang="fr">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <form method="post" action="/books/list">
+        <label for="categorie">Categorie :</label>
+        <select id="categorie" name="categorie">
+                  <option value="">  selection  </option>
+                    <option value="ro">roman historique</option>
+                    <option value="fa">fantasy</option>
+                    <option value="aut">autobiographie</option>
+
+            </select>
+
+
+        <p><button type="submit"> Rechercher </button></p>
+
+    </form>
+</body>
+
 </html>
